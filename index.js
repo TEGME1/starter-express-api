@@ -1,7 +1,11 @@
 const express = require('express')
 const app = express()
-app.all('/', (req, res) => {
-    console.log("Just got a request!")
-    res.send('Yo!')
+const port = process.env.PORT || 3000
+
+app.get('/', (req, res) => {
+    console.log('Welcome to the new age');
 })
-app.listen(process.env.PORT || 3000)
+
+app.listen(port, () => {
+    console.log(listening);
+})
